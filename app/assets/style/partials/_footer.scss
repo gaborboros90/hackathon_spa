@@ -1,0 +1,89 @@
+.footer-group {
+	padding: 25px 10px 25px;
+	background-color: #4e4e4e;
+
+.footer-nav-list {
+        margin-bottom: 20px;
+
+        h3 {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            cursor: pointer;
+            color: $colour-grey-dark;
+
+            &:after {
+                font-family: 'hcom-icons';
+                font-size: 10px;
+                content: '\e96e';
+                margin-left: 6px;
+                float: right;
+			}            
+
+            &.no-sublinks:after {
+                display: none;
+            }			
+
+            a {
+                text-decoration: none;
+                color: $colour-grey-dark;
+            }
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    .copyright {
+        padding: 10px;
+        text-align: center;
+
+        p, a {
+        	color: $colour-grey-dark;
+        }
+
+        .footer-welcome-rewards {
+        	display: none;
+        }
+    }
+}
+
+.ftr-drive-direct {
+    background-color: $colour-background-light ;
+    margin-top: 20px;
+    white-space: nowrap;
+    clear: both;
+    text-align: center;
+
+    .footer-hcom-app {
+	    text-decoration: none;
+	    margin-bottom: 12px;
+	    padding: 15px 0px 10px;
+	    color: #3b5998;
+	    display: inline-block;
+    }
+
+    img {
+    	margin-top: 5px;
+    	vertical-align: middle;
+    	max-height: 39px;
+    }
+
+    h3 {
+	    display: block;
+	    margin: 5px 0 0 0;
+	    font-size: 16px;
+	    font-weight: bold;
+	    padding-top: 5px;
+    }
+
+    p {
+	    font-size: 14px;
+	    margin-top: 10px;
+	    padding: 0 8px;
+	    color: #333;
+    }
+}

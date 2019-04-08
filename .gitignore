@@ -1,0 +1,5 @@
+.idea/**/*
+node_modules/
+app/assets/libs
+app/**/*.css
+app/assets/images/charts.jpg

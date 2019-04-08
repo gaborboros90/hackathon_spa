@@ -1,0 +1,224 @@
+@import "variables";
+/*
+ *  Dionysus core/base.css
+ *
+ *  Contains:
+ *  - Reset
+ *  - Global styles
+ *  - Grid
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+body {
+    font: 12px/135% arial, helvetica, clean, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+ * Base global styles
+ */
+
+body {
+    color: $colour-text;
+    font-size: 12px;
+    line-height: 135%;
+    font-family: arial, helvetica, sans-serif;
+    background: $colour-body;
+
+    .intl-ar_AE & {
+        font-family: tahoma, arial, helvetica, sans-serif;
+    }
+
+    .intl-ko_KR & {
+        font-family: 'Malgun Gothic', arial, sans-serif;
+        word-break: keep-all;
+    }
+}
+
+@font-face {
+    font-family: 'hcom-icons';
+    src: url('../fonts/hcom-icons.eot');
+    src: url('../fonts/hcom-icons.eot?#iefix') format("embedded-opentype"),
+         url('../fonts/hcom-icons.woff') format("woff"),
+         url('../fonts/hcom-icons.ttf') format("truetype"),
+         url('../fonts/hcom-icons.svg#icomoon') format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.RTL {
+    direction: rtl;
+}
+
+button {
+    font-family: arial, helvetica, sans-serif;
+
+    .intl-ko_KR & {
+        font-family: 'Malgun Gothic', arial, sans-serif;
+    }
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: $colour-link;
+}
+
+a:visited {
+    color: $colour-link-visited;
+}
+
+a:active {
+    color: $colour-link-active;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin:10px 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: $colour-headings;
+}
+
+::-moz-selection,
+::selection {
+    background:$colour-brand;
+    color:$colour-white;
+}
+
+ins {
+    text-decoration: none;
+}
+
+.js .js-offscreen {
+    position: absolute;
+    left: -999em;
+}
+
+.js .RTL .js-offscreen {
+    left: auto;
+    right: -999em;
+}
+
+.js .js-hidden {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.offscreen {
+    position: absolute;
+    left: -999em;
+}
+
+.RTL .offscreen {
+    left: auto;
+    right: -999em;
+}
+
+.lt-ie8 .clearfix {
+    zoom: 1;
+}
+
+.g {
+    background: $colour-white;
+    margin: 0 auto;
+    min-width: 760px;
+    padding: 0 1.04%;
+    width: 97.92%;
+    overflow: hidden;
+}
+
+.resp-module {
+    position: relative;
+}
+
+.resp-section:first-child {
+    padding: 0 10px;
+}
+
+.container-hero-image > .resp-row {
+    padding: 0;
+}
+
+.cont {
+    border: 1px solid #ccc;    
+}

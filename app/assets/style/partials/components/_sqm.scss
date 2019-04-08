@@ -1,0 +1,1485 @@
+.widget-query {
+    background-color: $colour-sqm-background;
+    border-color: $colour-sqm-border;
+    min-width: 298px !important; /* important because this is the minimum width the SQM should work at - do not override*/
+    max-width: 600px;
+    outline: none;
+    color: $colour-text-sqm;
+}
+
+.widget-query .widget-query-heading {
+    color: $colour-text-sqm;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    padding: 14px 15px 0;
+}
+
+.widget-query .widget-query-heading span {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.widget-query .cont-bd {
+    padding: 0;
+}
+
+.widget-query h3 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 10px 14px 4px;
+}
+.widget-query fieldset h3 {
+    margin: 0 0 4px;
+}
+
+.widget-query fieldset {
+    border-bottom: 1px solid $colour-sqm-border-top;
+    padding: 7px 15px 6px;
+    position: relative;
+}
+
+.widget-query select,
+.widget-query input {
+    margin-left: 0;
+}
+
+.widget-query select {
+    height: 25px;
+    margin: 0;
+}
+
+.widget-query-destination label {
+    display: block;
+    padding: 4px 0;
+}
+
+.widget-query input[type=text] {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.widget-query input[disabled] {
+    background-color: $colour-grey-mid;
+}
+
+.lt-ie9 .widget-query input[type=text] {
+    width: 95%;
+    padding: 5px 10px 4px 7px;
+}
+
+.widget-query-date {
+    position: relative;
+    width: 44%;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 100px;
+    max-width: 220px;
+}
+
+.lt-ie8 .widget-query-date {
+    display: inline;
+    zoom: 1;
+}
+
+.widget-query form>fieldset:first-child,
+.widget-query .widget-query-dates {
+    padding-bottom: 8px;
+}
+
+.widget-query .widget-query-dates {
+    white-space: nowrap;
+
+    .form-error-cont {
+        white-space: normal;
+    }
+}
+
+.widget-query-dates label,
+.widget-query-room-number label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.intl-ar_AE .widget-query-dates label {
+    // ar_AE is tahoma, adjust font here to prevent SQM breaking
+    font-size: 13px;
+}
+
+.widget-query-dates .aria-label {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    font-family: hcom-icons;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 0;
+    margin: 3px 0;
+    position: relative;
+    text-align: center;
+    vertical-align: bottom;
+    width: 23px;
+    left: -24px;
+    border: none;
+    height: 24px;
+    top: -2px;
+    background: transparent;
+    box-shadow: none;
+    color: $colour-grey-light;
+    cursor: text;
+
+    .RTL & {
+        left: 24px;
+    }
+}
+
+.lt-ie9 .widget-query-dates .aria-label,
+.ie9 .widget-query-dates .aria-label {
+    padding: 5px 0 4px;
+}
+
+.widget-query-dates input[type=text] {
+    width: 85%;
+    padding-left: 5px;
+    padding-right: 20px;
+    display: inline-block;
+    height: 27px;
+
+    .RTL & {
+        padding-left: 20px;
+        padding-right: 5px;
+    }
+    &:focus + .aria-label {
+        color: $colour-grey-darkish;
+    }
+}
+
+.widget-query-dates input[type=date] {
+    padding-left: 5px;
+}
+
+.widget-query-dates input[type=text]::-ms-clear {
+    display: none;
+}
+
+/* disable text selection for the date fields only on touch devices - HWEB-2909*/
+.widget-query-dates input[type=text] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.lt-ie9 .widget-query-dates input[type=text] {
+    width: 80%;
+    display: inline;
+    zoom: 1;
+}
+
+.lt-ie8 .widget-query-dates input[type=text] {
+    margin: 0;
+}
+
+.widget-query-dates span {
+    display: block;
+}
+
+.form-error-check-out .form-error {
+    margin-left: 20px;
+
+    .RTL & {
+        margin-left: 0;
+    }
+}
+
+.form-error-check-out .form-error:before {
+    left: auto;
+    right: 25px;
+}
+
+.form-error-check-out .form-error:after {
+    left: auto;
+    right: 24px;
+}
+
+.widget-query-dates .widget-query-nights {
+    display: none;
+    margin-top: 24px;
+    padding-bottom: 16px;
+    position: relative;
+    text-align: right;
+    width: 8%;
+    vertical-align: top;
+    left: 9px;
+}
+
+.RTL .widget-query-dates .widget-query-nights {
+    text-align: left;
+    left: auto;
+    right: 12px;
+}
+
+.widget-query-nights-display .widget-query-nights {
+    display: inline-block;
+}
+
+.widget-query-dates .widget-query-nights span {
+    display: block;
+    float: right;
+    width: 36px;
+    text-align: center;
+}
+
+.RTL .widget-query-dates .widget-query-nights span {
+    float: left;
+}
+
+.widget-query-dates .widget-query-nights .widget-query-nights-label {
+    margin: 0;
+    width: 100px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.RTL .widget-query-dates .widget-query-nights .widget-query-nights-label {
+    text-align: left;
+    left: 0;
+    right: auto;
+}
+
+.widget-query .form-error-opposite,
+.widget-query-dates .form-error-check-out {
+    text-align: right;
+}
+
+.RTL .widget-query-dates .form-error-opposite,
+.RTL .widget-query-dates .form-error-check-out {
+    text-align: left;
+}
+
+.widget-query-dates .form-error-opposite,
+.widget-query-dates .form-error-check-out {
+    .form-error {
+        &:before {
+            right: 61px;
+            left: auto;
+        }
+        &:after {
+            right: 60px;
+            left: auto;
+        }
+    }
+}
+
+.RTL .widget-query-dates .form-error-opposite,
+.RTL .widget-query-dates .form-error-check-out {
+    .form-error {
+        &:before {
+            left: 61px;
+            right: auto;
+        }
+
+        &:after {
+            left: 60px;
+            right: auto;
+        }
+    }
+}
+
+.lt-ie8 .widget-query-nights-display .widget-query-nights {
+    display: inline;
+    zoom: 1;
+}
+
+.widget-query-num-nights {
+    background-color: $colour-headings;
+    color: $colour-white;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    margin-bottom: 3px;
+    position: relative;
+}
+
+.widget-query-num-nights:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    margin: -5px 7px 0;
+    padding: 2px 0;
+    width: 16px;
+    border: 3px solid $colour-headings;
+    border-bottom: none;
+    top: 0;
+    left: 0;
+}
+
+.widget-query-nights.form-error {
+    border: none;
+}
+
+.widget-query-nights.form-error .widget-query-num-nights {
+    background-color: $colour-error;
+}
+
+.widget-query-nights.form-error .widget-query-num-nights:before {
+    border-color: $colour-error;
+}
+
+.widget-query-dates .widget-query-dates-not-known {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 10px 0 0;
+    display: block;
+}
+
+.widget-query-dates-not-known input {
+    vertical-align: bottom;
+    margin-right: 8px;
+}
+
+.RTL .widget-query-dates-not-known input {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.widget-query-dates-disabled .widget-query-day,
+.widget-query-dates-disabled .widget-query-nights  {
+    display: none;
+}
+
+.widget-query select {
+    font-size: 14px;
+    border: 1px solid $colour-grey-mid; /* border added to allow webkit to actually change the font-size https://code.google.com/p/chromium/issues/detail?id=104922 */
+    min-width: 43px;
+    padding: 3px 0 3px 0;
+}
+
+.lt-ie9 .widget-query select {
+    width: 43px;
+}
+
+.widget-query-room-options {
+    margin: 0 -15px;
+}
+
+.widget-query-room-summary {
+    display: none;
+}
+
+.js .widget-query-summary .widget-query-room-summary {
+    display: block;
+}
+
+.js .widget-query-summary .widget-query-rooms {
+    display: none;
+}
+
+.widget-query-room-summary ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+.widget-query-room-summary li {
+    float: left;
+    font-weight: bold;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.RTL .widget-query-room-summary li {
+    float: right;
+}
+
+.widget-query-room-summary li:first-child {
+    margin: 0;
+    padding-right: 38px;
+}
+
+.RTL .widget-query-room-summary li:first-child {
+    padding-right: 0;
+    padding-left: 38px;
+}
+
+.widget-query-room-summary h3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.widget-query-room-summary li:first-child h3 {
+    font-size: 16px;
+}
+
+.widget-query-room-summary button {
+    background: none;
+    border: none;
+    clear: left;
+    color: $colour-link;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.widget-query-room-options legend {
+    float: left;
+}
+
+.RTL .widget-query-room-options legend {
+    float: right;
+}
+
+.widget-query .widget-query-rooms {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 88px;
+}
+
+.widget-query .widget-query-room-number label {
+    margin-bottom: .4em;
+}
+
+.widget-query .widget-query-ft,
+.widget-query .widget-query-rooms,
+.widget-query .widget-query-room-children {
+    border-bottom: none;
+
+}
+
+.js .widget-query .widget-query-room-children-clone {
+    display: block;
+}
+
+.widget-query .widget-query-room-children {
+    clear: both;
+    margin: 10px 0 0 -15px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.RTL .widget-query .widget-query-room-children {
+    margin: 10px -15px 0 0;
+}
+
+.lt-ie8 .widget-query .widget-query-room-children {
+    border-top: none;
+}
+.lt-ie8 .widget-query .widget-query-room-children legend {
+    position: relative;
+    float: left;
+}
+
+.widget-query-room-options-label,
+.widget-query-room-children legend {
+    display: none;
+    font-weight: bold;
+    margin: 6px 0 6px 60px;
+}
+
+.RTL .widget-query-room-options-label,
+.RTL .widget-query-room-children legend {
+    margin: 6px 60px 6px 0;
+}
+
+.widget-query-rooms-multiple .widget-query-room-options-label {
+    position: absolute;
+}
+
+.widget-query-room-children legend,
+.widget-query-rooms-multiple .widget-query-room-options-label {
+    display: inline-block;
+}
+
+.widget-query-room-number + .widget-query-room-options .widget-query-room-options-label,
+.RTL .widget-query-room-number + .widget-query-room-options .widget-query-room-options-label {
+    margin-top: 29px;
+}
+
+.widget-query-room-number {
+    float: left;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.lt-ie8 .widget-query-room-number {
+    margin-left: 14px;
+}
+
+.widget-query-people {
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+.RTL .widget-query-people {
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.widget-query-people label {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.widget-query-adults,
+.widget-query-children {
+    display: inline-block;
+    margin-left: 3px;
+    min-width: 77px;
+    text-align: right;
+}
+
+.RTL .widget-query-adults,
+.RTL .widget-query-children {
+    margin-left: 0;
+    margin-right: 3px;
+    text-align: left;
+}
+
+.widget-query-children {
+    margin-right: -5px;
+}
+
+.RTL .widget-query-children {
+    margin-right: 3px;
+    margin-left: -5px;
+}
+
+.widget-query-people label,
+.widget-query-people span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.widget-query .widget-query-touch-select {
+    display: none;
+}
+
+.widget-query .cta {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.widget-query-room-options + .widget-query-room-options .widget-query-people label {
+    display: none;
+}
+
+.widget-query .widget-query-room-options-children {
+    clear: both;
+    text-align: right;
+    width: 260px;
+}
+
+.RTL .widget-query .widget-query-room-options-children {
+    text-align: left;
+}
+
+.widget-query-room-options-children label {
+    margin: 0 5px;
+}
+
+.widget-query-room-children-templ {
+    display: none;
+}
+
+.widget-query .widget-query-ft {
+    text-align: right;
+}
+
+.RTL .widget-query .widget-query-ft {
+    text-align: left;
+}
+
+.widget-query .widget-query-ft .cta {
+    font-size: 22px;
+    margin: 4px 0;
+}
+
+.widget-query .installment-message {
+    display: inline-block;
+    font-size: 16px;
+    color: $colour-text;
+    font-weight: bold;
+    margin: 0 0 0 33px;
+    vertical-align: middle;
+}
+
+.RTL .widget-query .installment-message {
+    margin: 0 33px 0 0;
+}
+/*
+ * Overrides of padding/height for when don't know dates checkbox is NOT there
+ */
+
+.widget-query-dates-required .widget-query-dates,
+.widget-query-dates-required .widget-query-room-options {
+    padding: 14px 14px 10px;
+}
+.widget-query-dates-required .widget-query-room-number {
+    margin-top: 17px;
+}
+.widget-query.widget-query-dates-required .widget-query-occupancy {
+    min-height: 92px;
+}
+/*
+ * Overrides for query widget shown in overlay e.g. City Landing Page/Dateless SRP
+ */
+
+.widget-overlay.widget-overlay-query {
+    max-width: 538px;
+    background: $colour-sqm-overlay-background;
+}
+
+.widget-overlay-query {
+    .widget-overlay-bd {
+        padding: 0;
+    }
+
+    .widget-overlay-query .widget-query {
+        background: $colour-transparent;
+    }
+
+    .widget-overlay-query .widget-query-dates {
+        white-space: normal;
+    }
+}
+
+
+
+    .widget-overlay.widget-overlay-query {
+        width: 600px;
+        max-width: 600px;
+        margin-left: -300px;
+    }
+
+    .widget-overlay-query .widget-query {
+        max-height: none;
+    }
+
+    .widget-overlay .widget-query {
+
+    }
+
+
+    .widget-overlay .widget-query-people {
+        margin-right: -15px;
+    }
+
+    .RTL .widget-overlay .widget-query-people {
+        margin-left: -15px;
+    }
+
+
+    .widget-overlay.widget-overlay-query {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+.widget-overlay-query .widget-query {
+    border: none;
+    overflow: auto;
+    margin: 0;
+}
+
+.widget-overlay-query .widget-query-ft {
+    display: none;
+}
+
+.widget-overlay-query .widget-query::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.widget-overlay-query .widget-query::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.widget-overlay-query .widget-query::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.widget-overlay-query .widget-query::-webkit-scrollbar-thumb {
+    border: 2px solid $colour-background;
+    background-color: $colour-dark-alpha-5;
+}
+
+.widget-overlay-query .widget-query-room-options:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.widget-query-geo .widget-query-destination {
+    padding-right: 48px;
+    position: relative;
+}
+
+.RTL .widget-query-geo .widget-query-destination {
+    padding-right: 15px;
+    padding-left: 48px;
+}
+
+.widget-query .cta-geo {
+    font-family: hcom-icons;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 0;
+    margin: 4px -30px 0 0;
+    height: 24px;
+    width: 24px;
+    float: right;
+    position: relative;
+    background-color: $colour-link;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.widget-query .cta-geo:before {
+    content: none;
+}
+
+.RTL .widget-query .cta-geo {
+    float: left;
+    margin: 4px 0 0 -30px;
+}
+
+.widget-query .cta-geo.cta-processing {
+    color: $colour-white;
+}
+
+.widget-query .widget-query-occupancy {
+    min-height: 81px;
+    display: none;
+}
+
+.widget-query-compact-occupancy .widget-query-occupancy {
+    display: block;
+}
+.widget-query-compact-occupancy .widget-query-occupancy select {
+    width: auto; /*needed for ie8*/
+    margin-top: 10px;
+}
+
+.widget-query-compact-occupancy .widget-query-rooms {
+    display: none;
+}
+
+.widget-query-room-children .form-error-cont {
+    padding-left: 10px;
+}
+
+.widget-query-room-children  .form-error:before {
+    left: auto;
+    right: 29px;
+}
+
+.widget-query-room-children .form-error:after {
+    left: auto;
+    right: 28px;
+}
+
+.widget-query-inline .widget-query-room-children .form-error-cont {
+    text-align: right;
+}
+.RTL .widget-query-inline  .widget-query-room-children .form-error-cont {
+    text-align: left;
+}
+
+.RTL .widget-query-room-children .form-error:before {
+    left: 19px;
+    right: auto;
+}
+
+.RTL .widget-query-room-children .form-error:after {
+    left: 18px;
+    right: auto;
+}
+
+
+
+
+    .widget-query {
+        min-width: 290px !important;  /* important because this is the mimum width the SQM should work at - do not override*/
+        max-width: 100%;
+    }
+
+    .widget-query h2 span {
+        font-size: 14px;
+    }
+
+    .widget-query fieldset {
+        padding: 7px 15px 6px;
+    }
+
+    .widget-query fieldset.widget-query-dates {
+        padding: 9px 15px 9px;
+    }
+
+    .widget-query .widget-query-destination {
+        padding-right: 55px;
+    }
+
+    .RTL .widget-query .widget-query-destination {
+        padding-left: 55px;
+        padding-right: 15px;
+    }
+    .RTL .widget-query-geo .widget-query-destination {
+        padding-right: 15px;
+    }
+
+    .widget-query-destination input {
+
+    }
+
+    .RTL .widget-query-destination input {
+
+    }
+
+    input[type=text] {
+        font-size: 16px;
+        padding: 8px 10px 8px 7px;
+    }
+
+    .widget-query select {
+        background: $colour-white;
+        font-size: 16px;
+        height: 34px;
+        padding: 3px 10px; /*crappy horizontal padding for mobile chrome to prevent it cropping the width of the unstylable <option/>s*/
+    }
+
+    .widget-query .cta-geo {
+        margin-top: 9px;
+        position: relative;
+        left: 0;
+    }
+
+    .RTL .widget-query .cta-geo {
+        right: 0;
+    }
+
+    .widget-query-dates .widget-query-dates-not-known {
+        font-size: 14px;
+        margin-top: 12px;
+        margin-bottom: 4px;
+    }
+
+    .widget-query .widget-query-date {
+        width: 48%;
+        max-width: 50%;
+        min-height: 5em;
+    }
+
+    .widget-query .widget-query-date + .widget-query-date {
+        margin-left: 2%;
+    }
+
+    .RTL .widget-query .widget-query-date + .widget-query-date {
+        margin-left: 0;
+        margin-right: 2%;
+    }
+
+    .widget-query .widget-query-date input {
+        width: 99%;
+        border: 1px solid $colour-transparent;
+        height: 100px;
+    }
+
+    .responsive-css.ie9 .widget-query-date input[type=text] {
+        line-height: 90px;
+    }
+    .widget-query-date input {
+        color: $colour-link;
+        font-weight: bold;
+    }
+    .widget-query-date input::-webkit-input-placeholder {
+        color: $colour-link;
+    }
+    .widget-query-date input:-moz-placeholder {
+        color: $colour-link;
+    }
+    .widget-query-date input::-moz-placeholder {
+        color: $colour-link;
+    }
+    .widget-query-date input:-ms-input-placeholder {
+        color: $colour-link;
+    }
+
+    .widget-query-date input[type=text]:focus {
+        border: 1px solid $colour-grey-darkish;
+    }
+
+    .widget-query-dates .widget-query-day {
+        color: $colour-grey-darkish;
+        margin: -28px 0 0 0;
+        font-size: 14px;
+        position: absolute;
+        bottom: 27px;
+        left: 7px;
+    }
+
+    .RTL .widget-query-dates .widget-query-day {
+        margin: -28px 0 0 0;
+        left: auto;
+        right: 7px;
+    }
+
+
+    /*
+        use aria labels to cover the entire input and related day/night info
+        this makes the whole area clickable
+        z-index to force button above number of nights
+    */
+    .widget-query-dates .aria-label {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        margin: 0;
+        width: 99%;
+        height: 110px;
+        background: $colour-transparent;
+        border: none;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        z-index: 2; /*MUST be greater than the placeholder polyfill z-index for IE8/9 */
+    }
+
+    .widget-query-dates .widget-query-nights {
+        position: absolute;
+        right: 18px;
+        left: 51%;
+        top: auto;
+        margin: -2.1em 6px 0 6px;
+        padding: 0;
+        white-space: nowrap;
+        width: auto;
+        text-align: left;
+    }
+
+    .RTL .widget-query-dates .widget-query-nights {
+        left: auto;
+        right: 51%;
+    }
+
+    .widget-query-dates .widget-query-num-nights {
+        font-size: inherit;
+    }
+
+    .widget-query-nights-display .widget-query-dates .widget-query-nights {
+        display: block;
+        font-size: 14px;
+    }
+
+    .widget-query-dates-disabled.widget-query-dates .widget-query-nights {
+        display: none;
+        width: auto;
+    }
+
+    .widget-query-dates .widget-query-num-nights {
+        background: $colour-transparent;
+        color: $colour-grey-darkish;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .widget-query-dates .widget-query-nights span {
+        color: $colour-grey-darkish;
+        display: inline;
+        float: none;
+    }
+
+    .widget-query-dates .widget-query-nights .widget-query-nights-label {
+        position: static;
+    }
+
+    .widget-query-num-nights:before {
+        content: none;
+    }
+
+    .widget-query .widget-query-touch-select {
+        display: block;
+        font-size: 16px;
+    }
+
+    .widget-query .widget-query-touch-select button {
+        border: none;
+        background: $colour-grey-dark;
+        color: $colour-white;
+        cursor: pointer;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .widget-query .widget-query-touch-select span {
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+    }
+
+    .widget-query-room-number {
+        margin-top: 14px;
+    }
+
+    .widget-query-room-options-label {
+        font-size: 14px;
+        margin-left: 65px;
+    }
+
+    .widget-query-adults,
+    .widget-query-children {
+        min-width: 115px;
+    }
+
+    .widget-query-people {
+        margin-left: 140px;
+    }
+
+    .RTL .widget-query-people {
+        margin-left: 0;
+        margin-right: 140px;
+    }
+
+    .widget-query-people label {
+        margin-top: 0;
+    }
+
+    .widget-query-people span {
+        padding: 2px 0;
+    }
+
+    .widget-query-room-children legend {
+        margin: 0 0  10px 0;
+        font-size: 14px;
+        width: 273px;
+        text-align: right;
+    }
+
+    .RTL .widget-query-room-children legend {
+        text-align: left;
+    }
+
+    .widget-query-room-options-children {
+        margin-left: 0;
+        margin-bottom: 8px;
+        overflow: hidden;
+        text-align: right;
+        width: 389px;
+    }
+
+    .widget-query-room-options-children label,
+    .widget-query-room-options-children select {
+        float: none;
+    }
+
+    .widget-query-room-children .form-error-check-out {
+        padding-left: 30px;
+        margin-left: 125px;
+    }
+    .RTL .widget-query-room-children .form-error-cont {
+        padding-right: 30px;
+        margin-right: 125px;
+    }
+
+    .widget-query-date label {
+        border-bottom: 1px solid $colour-grey-lighter;
+        color: $colour-grey-darkish;
+        margin: 0 5px;
+        padding: 4px 0;
+        position: relative;
+        margin-top: -20px;
+        top: 2em;
+    }
+
+    .widget-query-occupancy .widget-query-room-number {
+        float: none;
+        margin-top: 3px;
+        position: static;
+    }
+
+    .form-error-check-out .form-error:before {
+        left: auto;
+        right: 25px;
+    }
+
+    .form-error-check-out .form-error:after {
+        left: auto;
+        right: 24px;
+    }
+
+   .form-error-opposite .form-error:before {
+        left: 21px;
+    }
+
+    .form-error-opposite .form-error:after{
+        left: 20px;
+    }
+    .widget-query-dates .form-error-check-out,
+    .widget-query-dates .form-error-opposite {
+        .form-error {
+            &:before {
+                left: auto;
+                right: 21px;
+            }
+
+            &:after {
+                left: auto;
+                right: 20px;
+            }
+        }
+    }
+    .RTL .widget-query-dates .form-error-check-out,
+    .RTL .widget-query-dates .form-error-opposite {
+        .form-error {
+            &:before {
+                right: auto;
+                left: 21px;
+            }
+
+            &:after {
+                right: auto;
+                left: 20px;
+            }
+        }
+    }
+
+
+
+
+
+    .widget-query .cta-geo {
+        background: transparent;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+        border: none;
+        font-size: 28px;
+        height: 28px;
+        width: 35px;
+        color: $colour-link;
+        position: absolute;
+        left: auto;
+        right: 12px;
+        top: 5px;
+        margin: 9px 0;
+    }
+
+    .RTL .widget-query .cta-geo {
+        left: 12px;
+        right: auto;
+    }
+
+    .widget-query .widget-query-dates {
+        white-space: normal;
+    }
+
+    .widget-query .widget-query-occupancy select,
+    .RTL .widget-query .widget-query-occupancy select {
+        width: 95%;
+        margin: 2em 0 0;
+    }
+
+    .widget-query-room-number {
+        position: static;
+        float: none;
+        padding-left: 15px;
+        margin: 6px -15px;
+        min-height: 2.2em;
+    }
+
+    .RTL .widget-query-room-number {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+
+    .widget-query select {
+        height: 30px;
+    }
+
+    .widget-query-room-number label {
+        position: absolute;
+    }
+
+    .widget-query-room-number select {
+        margin: -5px 0 5px 92px;
+    }
+
+    .RTL .widget-query-room-number select {
+        margin: -5px 92px 5px 0;
+    }
+
+    .widget-query-people {
+        margin-left: 91px;
+        margin-bottom: 3px;
+        margin-right: -18px;
+    }
+
+    .RTL .widget-query-people {
+        margin-left: -18px;
+        margin-right: 91px;
+    }
+
+    .widget-query-adults,
+    .widget-query-children {
+        text-align: left;
+    }
+
+    .RTL .widget-query-adults,
+    .RTL .widget-query-children {
+        text-align: right;
+    }
+
+    .widget-query-adults {
+        min-width: 100px;
+    }
+
+    .widget-query-children {
+        min-width: 65px;
+    }
+
+    .widget-query-room-options-label,
+    .RTL .widget-query-room-options-label {
+        margin: 6px 0;
+        position: absolute;
+    }
+
+    /* Show room label event when only one room for x-small-screen */
+    .widget-query-room-options-label {
+        display: inline-block;
+    }
+
+    .widget-query-room-options-children {
+        width: 251px;
+    }
+
+    .widget-query-room-children legend {
+        width: 182px;
+    }
+
+    .widget-query-room-summary li {
+        margin-left: 14px;
+    }
+    .widget-query-room-summary li:first-child {
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .RTL .widget-query-room-summary li {
+        margin-left: 0;
+        margin-right: 14px;
+    }
+    .RTL .widget-query-room-summary li:first-child {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .widget-query-room-children .form-error-check-out {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .RTL .widget-query-room-children .form-error-cont {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .widget-query-room-children .form-error-cont {
+        text-align: left;
+    }
+    .RTL .widget-query-room-children .form-error-cont {
+        text-align: right;
+    }
+
+    .widget-query .cta[type=submit] {
+        width: 100%;
+    }
+
+
+
+/*
+ * Overrides for inline display query form
+ */
+
+.widget-query.widget-query-inline {
+    background-color: $colour-sqm-background-horizontal;
+    box-sizing: border-box;
+    border-color: $colour-sqm-inline-border;
+    margin-bottom: 0;
+    max-width: 100%;
+    padding: 10px 0 0 0;
+}
+.widget-query.widget-query.widget-query-people label input {
+    border-width: 1px;
+}
+.widget-query.widget-query-inline fieldset,
+.widget-query.widget-query-inline fieldset {
+    border-width: 0;
+    vertical-align: top;
+    padding-top: 0;
+}
+.widget-query.widget-query-inline label,
+.widget-query .widget-query-destination label,
+.widget-query-inline fieldset label,
+.widget-query-dates .widget-query-dates-not-known {
+    font-size: 12px;
+}
+.widget-query.widget-query-inline .aria-label {
+    font-size: 16px;
+}
+.widget-query-inline .widget-query-destination,
+.widget-query-inline .widget-query-dates,
+.widget-query-inline .widget-query-rooms,
+.widget-query-inline .widget-query-ft {
+    display: inline-block;
+}
+.widget-query-inline .widget-query-destination label,
+.widget-query-inline .widget-query-room-options-children label {
+    font-weight: bold;
+    padding: 0;
+}
+.widget-query-inline .widget-query-destination {
+    padding-right: 30px;
+    width: 28%;
+}
+.intl-en_CN .widget-query-inline .widget-query-destination {
+    /* Needs more space due to Pinyin text - see SHP-21635 */
+    width: 31%;
+}
+.widget-query-inline .widget-query-destination label {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.widget-query-inline .widget-query-rooms {
+    min-height: 50px;
+    min-width: 50px;
+}
+.widget-query-inline .widget-query-people label {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.widget-query-inline .widget-query-room-number {
+    margin-top: 0;
+}
+.widget-query-inline .widget-query-people select {
+    margin-top: 4px;
+}
+.widget-query-inline .widget-query-room-options-children label {
+    margin-top: 5px;
+}
+.widget-query-inline .widget-query-ft .cta {
+    font-size: 14px;
+    margin-top: 19px;
+}
+.widget-query-inline.widget-query-compact-occupancy .widget-query-occupancy {
+    display: inline-block;
+}
+.widget-query-inline.widget-query-compact-occupancy .widget-query-occupancy .widget-query-room-number {
+    position: static;
+}
+.widget-query-inline.widget-query-compact-occupancy .widget-query-occupancy label {
+    margin-bottom: .4em;
+}
+.widget-query-inline.widget-query-compact-occupancy .widget-query-occupancy select {
+    margin-top: 0;
+    width: auto;
+}
+.widget-query-inline.widget-query-compact-occupancy .widget-query-rooms {
+    display: none;
+}
+
+/* medium-large-screen: top end */
+
+    .widget-query-inline .widget-query-destination {
+        width: 54%;
+    }
+
+
+/* medium-large-screen: bottom end */
+
+    .widget-query-inline .widget-query-date {
+        max-width: 145px;
+    }
+
+
+ /* medium-screen: top end */
+
+    .widget-query-inline .widget-query {
+        border-top-left-radius: 0;
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .RTL .widget-query-inline.widget-query {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 0;
+    }
+    .widget-query-inline .widget-query-destination,
+    .widget-query-inline .widget-query-dates,
+    .widget-query-inline .widget-query-ft {
+        display: block;
+        width: auto;
+    }
+    .widget-query label {
+        font-size: 16px;
+    }
+    .widget-query-inline .widget-query-ft .cta {
+        font-size: 24px;
+    }
+    .widget-query-inline .widget-query-destination label {
+        white-space: normal;
+    }
+    .widget-query-inline .widget-query-room-options-label {
+        padding-top: 6px;
+    }
+    .widget-query-inline .widget-query-ft .cta {
+        margin-top: -10px;
+    }
+
+    .widget-query.widget-query-inline label,
+    .widget-query .widget-query-destination label,
+    .widget-query-inline fieldset label,
+    .widget-query-dates .widget-query-dates-not-known {
+        font-size: 14px;
+    }
+
+
+
+    .widget-query-rooms {
+        margin-top: 8px;
+    }
+    .widget-query-inline .widget-query-ft .cta {
+        margin-top: 0;
+    }
+
+    .widget-query-inline .cta-geo {
+        bottom: 6px;
+        top: auto;
+    }
+    .widget-query-inline.widget-query-compact-occupancy .widget-query-occupancy select {
+        margin-top: 2em;
+    }
+
+
+.lt-ie8 .widget-query-inline .widget-query-date {
+    width: 135px;
+}
+.lt-ie8 .widget-query-inline .widget-query-date label {
+    margin-top: 1px;
+}
+.lt-ie9 .widget-query-inline .widget-query-date {
+    max-width: 130px;
+}
+.lt-ie9 .widget-query-inline .widget-query-dates input[type=text] {
+    width: 79%;
+}
+.lt-ie9 .widget-query-inline .form-error-check-out {
+    padding-left: 130px;
+}

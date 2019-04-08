@@ -1,0 +1,10 @@
+<div class="owl-carousel owl-theme app-carousel" style="height: 340px; min-height: 300px;">
+    <a href="{{teaser.url || teaser.imageUrl}}" class="item" ng-repeat="teaser in data">
+        <img ng-src="{{teaser.image.path || teaser.imageUrl}}" alt="{{teaser.image.alt}}" />
+        <div class="image-description" ng-if="details">
+            <div class="sale">{{teaser.title}}</div>
+            <div class="save">{{teaser.subtitle}}</div>
+            <div class="action">{{teaser.linkTitle}}</div>
+        </div>
+    </a>
+</div>

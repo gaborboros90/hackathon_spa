@@ -1,0 +1,111 @@
+<div class="resp-row resp-full-bleed">
+    <div class="resp-col resp-xs1 resp-s2 resp-m6 resp-ml6 resp-l12 resp-xl12 container-hero-image full-bleed">
+        <div class="resp-row resp-section ">
+            <div class="resp-col resp-xs1 resp-s2 resp-m6 resp-ml3 resp-l4 resp-xl4 container-queryform">
+                <div class="resp-module">
+                    <div
+                        class="cont widget-query widget-query-dates-required widget-query-compact-occupancy  widget-query-nights-display"
+                        data-long-stays-base-url="http://Groups.hotels.com/GroupForm.cfm?locale=en_GB&amp;es=1"
+                        data-prefix="qf-0" tabindex="-1"><h1 class="cont-hd-alt widget-query-heading">Hotel search</h1>
+
+                        <form class="cont-bd" role="search" _lpchecked="1">
+                            <fieldset class="widget-query-destination">
+                                <input type="text" id="qf-0q-destination" list="suggestions" ng-model="vm.selectedDestination">
+                                <datalist id="suggestions" >
+                                    <option ng-repeat="suggestion in vm.suggestions" value="{{suggestion.name}}"></option>
+                                </datalist>
+                                <label for="qf-0q-destination">Destination, hotel, landmark or address</label>
+                                <input type="hidden" name="as-shown" value="false"></fieldset>
+                            <fieldset class="widget-query-dates">
+                                <div class="widget-query-date"><label for="qf-0q-localised-check-in"
+                                                                      id="widget-query-label-2">Check in</label><input
+                                    type="date" class="query-localised-check-in " name="q-localised-check-in"
+                                    id="qf-0q-localised-check-in" ng-model="vm.data.dates.checkin.iso" placeholder="dd/mm/yyyy"
+                                    aria-haspopup="true" aria-labelledby="widget-query-label-1 widget-query-label-2"
+                                    autocomplete="off"><input type="hidden" name="q-check-in" id="q-check-in" value="">
+                                </div>
+                                <div class="widget-query-date"><label for="qf-0q-localised-check-out"
+                                                                      id="widget-query-label-4">Check out</label><input
+                                    type="date" class="query-localised-check-out " name="q-localised-check-out"
+                                    id="qf-0q-localised-check-out" ng-model="vm.data.dates.checkout.iso" placeholder="dd/mm/yyyy"
+                                    aria-haspopup="true" aria-labelledby="widget-query-label-3 widget-query-label-4"
+                                    autocomplete="off"><input type="hidden" name="q-check-out" id="q-check-out"
+                                                              value="">
+                                </div>
+                                <span class="widget-query-nights" id="qf-0q-nights"><span ng-show="!!vm.data.dates.numnights"><span
+                                    class="widget-query-num-nights"></span>{{vm.data.dates.numnights}}</span> <span
+                                    class="widget-query-nights-label">Night</span></span></fieldset>
+                            <fieldset class="widget-query-rooms">
+                                <div class="widget-query-room-number"><label for="qf-0q-rooms">Rooms</label><select
+                                    name="q-rooms" class="query-rooms" id="qf-0q-rooms">
+                                    <option selected="selected">1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option value="9">9+</option>
+                                </select></div>
+                                <fieldset class="widget-query-room-options">
+                                    <legend class="widget-query-room-options-label">Room 1:</legend>
+                                    <div class="widget-query-people">
+                                        <div class="widget-query-adults"><label for="qf-0q-room-0-adults">Adults</label><select
+                                            name="q-room-0-adults" id="qf-0q-room-0-adults">
+                                            <option>1</option>
+                                            <option selected="selected">2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select><span>Aged 18+</span></div>
+                                        <div class="widget-query-children"><label
+                                            for="qf-0q-room-0-children">Children</label><select name="q-room-0-children"
+                                                                                                id="qf-0q-room-0-children">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select><span>0-17</span></div>
+                                    </div>
+                                </fieldset>
+                            </fieldset>
+                            <fieldset class="widget-query-ft">
+                                <button type="submit" class="cta cta-strong" ng-click="vm.search()">Search</button>
+                            </fieldset>
+                            <div class="widget-query-sort"></div>
+                            <div class="widget-query-filters"></div>
+                            <input name="page-name" type="hidden" value="HomePage"></form>
+                    </div>
+                </div>
+            </div>
+            <div class="resp-col resp-xs1 resp-s2 resp-m6 resp-ml3 resp-l4 resp-xl4 returning-user">
+                <div class="resp-module">
+                    <div data-flexible-component="responsive-returning-user" data-flexible-component-data=""><span
+                        class="button maximize-button"></span>
+
+                        <div class="content" style="display: block;">
+                            <div class="recent-search" style="display: none;">
+                                <div class="cont-hd"><h2>Your recent searches<span
+                                    class="button minimize-button"></span></h2></div>
+                                <ul class="cont-bd"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="content">
+                <div class="img"
+                     style="background-image: url(https://a1.cdn-hotels.com/cos/heroimage/homepage/London-0_154018789.jpg);">
+                    <div class="shadow-overlay-top"></div>
+                    <div class="shadow-overlay-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

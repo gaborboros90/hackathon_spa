@@ -1,0 +1,237 @@
+<div class="srp-page">
+    <div ng-show="vm.sqmVisibility">
+        <sqm-directive></sqm-directive>
+    </div>
+
+    <section id="tools-menu">
+        <a ng-href="" class="cta link-map" ng-if="vm.model.body.map.linkTo.mapViewUrl">Map</a>
+
+        <button class="widget-toggle-btn  widget-toggle-btn-icon" ng-click="vm.sqmVisibility = !vm.sqmVisibility" type="button">Change search</button>
+
+        <div id="sort" ng-if="vm.model.body.sortResults">
+            <p class="sort-label">Sort by</p>
+            <ul id="enhanced-sort" class="disabled">
+                {foreach $option in $sortResults.options}
+                <li class="sort-option selected"
+                    ng-repeat="option in vm.model.body.sortResults.options">
+                    <a ng-href="">{{option.label}}</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div id="listings" class="h-listing" lazy-load="" pn="vm.pn">
+        <ol class="listings">
+            <li class="hotel dmd" ng-repeat="result in vm.model.body.searchResults.results track by $index" ng-class="$result.deals.dealOfTheDay ? 'deal-of-the-day' : ''">
+                <article>
+
+                    <a class="header" ng-href="{{}}"
+                       ng-if="result.deals.dealOfTheDay">
+                        <h2>Deal of the Day</h2>
+                        <div class="message-and-counter">
+                            <p><span class="deal-text">result.deals.dealOfTheDay.dealText</span> <span
+                                class="urgency-message">Hurry, ends soon</span></p>
+                            <span class="countdown-timer">result.deals.dealOfTheDay.timeLeft</span>
+                        </div>
+                    </a>
+
+                    <div class="hotel-wrap" ng-click="vm.goToPdp(result.urls.pdpDescription)">
+                        <div class="description h-card resp-module">
+                            <h3 class="p-name">
+                                <a ng-href="{{}}">{{result.name}}</a>
+                            </h3>
+
+                        <span class="hotel-badge" data-badge-type="{{result.badging.hotelBadge.type}}"
+                              ng-if="result.badging.hotelBadge">{{result.badging.hotelBadge.label}}</span>
+
+                            <div class="contact">
+                                <p class="p-adr" dir="ltr" ng-if="result.address">
+                                    <span class="p-street-address">{{result.address.streetAddress}}</span>
+                                    <span class="p-extended-address" ng-if="result.address.extendedAddress">, {{result.address.extendedAddress}}</span>
+                                    <span class="p-locality">, {{result.address.locality}}</span>
+                                    <span class="p-region" ng-if="result.address.region">, {{result.address.region}}</span>
+                                    <span class="p-postal-code">, {{result.address.postalCode}}</span>
+                                    <span class="p-country-name"> {{result.address.countryName}}</span>
+                                </p>
+                                <p class="p-tel widget-tooltip widget-tooltip-tr widget-tooltip-multiline" dir="ltr"
+                                   ng-if="result.telephone.info">
+                                    {{result.telephone.number}}
+                                </p>
+                                <p class="p-tel" dir="ltr" ng-if="result.telephone">{{result.telephone.number}}</p>
+                            </div>
+                            <div class="image-and-details">
+                                <div class="image">
+                                <span>
+                                    <a ng-href="{{}}">
+                                        <img class="u-photo use-bgimage"
+                                             ng-style="{'background-image': 'url(' + result.thumbnailUrl + ')'}">
+                                    </a>
+                                </span>
+                                </div>
+                                <div class="details resp-module">
+                                    <div class="additional-details resp-module">
+                                        <div class="additional-details-container">
+                                            <div class="star-rating-container resp-module"
+                                                 ng-if="vm.model.body.searchResults.showStarRating && result.starRating">
+                                                <div
+                                                    class="star-rating-text"
+                                                    ng-class="$result.starRating >= 4 ? 'star-rating-text-strong' : ''">
+                                                    <!--                                                {if $result.starRating != floor($result.starRating)}
+                                                                                                    {i18n('sfsearch.resultsInfo.star', round($result.starRating, 1))}
+                                                                                                    {else}
+                                                                                                    {i18n('sfsearch.resultsInfo.star', floor($result.starRating))}
+                                                                                                    {/if}-->
+                                                    {{result.starRating}} stars
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="location-info resp-module">
+                                                <a class="map-link"
+                                                   ng-if="result.urls.pdpMap">{{result.neighbourhood}}</a>
+                                            <span class="map-link"
+                                                  ng-if="!result.urls.pdpMap">{{result.neighbourhood}}</span>
+                                                <div class="welcome-rewards"
+                                                     ng-if="result.welcomeRewards && result.isInExpandedArea"></div>
+
+                                                <ul>
+                                                    <li ng-repeat="landmark in result.landmarks">
+                                                        {{landmark.distance}} to {{landmark.label}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="welcome-rewards widget-tooltip widget-tooltip-tr"
+                                             ng-if="result.welcomeRewards">
+                                            <span class="widget-tooltip-bd">{{result.welcomeRewards.info}}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews-box resp-module"
+                                         ng-if="result.guestReviews || result.tripAdvisorGuestReviews">
+                                        <div class="cont">
+                                            <div class="guest-reviews" ng-if="result.guestReviews">
+                                                <div
+                                                    class="guest-reviews-badge"
+                                                    ng-class="$result.guestReviews.badge ? 'guest-rating-'+result.guestReviews.badge : ''">
+
+                                                    {{result.guestReviews.badgeText}}
+                                                <span class="guest-rating-value">
+                                                            <strong>{{result.guestReviews.rating}}</strong> / {{result.guestReviews.scale}}
+                                                </span>
+                                                </div>
+                                                <div class="guest-reviews-link">
+                                                    <a href="" class="full-view">{{result.guestReviews.totalText}}</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="ta-reviews" ng-if="result.tripAdvisorGuestReviews">
+                                                <div class="logo-wrap">
+                                                    <span class="ta-logo">TripAdvisor Traveller Rating: {{result.tripAdvisorGuestReviews.rating}}</span>
+                                                <span class="ta-rating">
+
+                                                    <span class="icon icon-trip-advisor"
+                                                          ng-repeat="i in vm.getNumber(result.tripAdvisorGuestReviews.rating) track by $index">&#xe976;</span>
+
+                                                    <!--                                                            {if $result.tripAdvisorGuestReviews.rating != floor($result.tripAdvisorGuestReviews.rating)}
+                                                                                                                    <span class="icon icon-trip-advisor">{if $langDir == 'RTL'}&#xe978;{else}&#xe977;{/if}</span>
+                                                                                                                {/if}
+                                                                                                                {for $circle in range(ceiling($result.tripAdvisorGuestReviews.rating), 5)}
+                                                                                                                    <span class="icon icon-trip-advisor">&#xe975;</span>
+                                                                                                                {/for}-->
+                                                        </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <span class="ta-total-reviews">{{result.tripAdvisorGuestReviews.total}} reviews</span>
+                                                </div>
+                                                <img class="ta-tracking-pixel"
+                                                     ng-src="{{vm.model.body.tripAdvisorTrackingUrl}}" alt=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="frequent-flyer-message" ng-if="result.messaging.frequentFlyerReward">
+                                        {{result.messaging.frequentFlyerReward}}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pricing-bg"></div>
+                        <div
+                            class="pricing resp-module">
+                            <div class="special-deal widget-tooltip widget-tooltip-tl widget-tooltip-multiline"
+                                 ng-if="result.deals.specialDeal"
+                                 data-drr-id="{{result.deals.priceReasoning}}">
+                                <span class="icon">&#xe94e;</span><b>Special Deal</b>
+                                <span class="widget-tooltip-bd">{{result.deals.specialDeal.dealText}}</span>
+                            </div>
+                            <div class="price" ng-if="result.ratePlan.price">
+                                <a ng-href="">
+                                    <span class="price-from-info" ng-if="result.ratePlan.price.fromPrice">from </span>
+
+                                <span class="old-price-cont" ng-if="result.ratePlan.price.old">
+                                        <del
+                                            ng-class="vm.model.body.showLegalInfoForStrikethroughPrices ? 'widget-tooltip widget-tooltip-multiline widget-tooltip-tl' : ''">
+                                            {{result.ratePlan.price.old}}
+                                                <span class="widget-tooltip-bd"
+                                                      ng-if="vm.model.body.showLegalInfoForStrikethroughPrices">The struck out price is based on the hotel's standard rate, as determined and supplied by the hotel.</span><span
+                                            class="strikethrough-asterisk">*</span>
+                                        </del>
+                                    </span>
+                                    <b ng-if="result.ratePlan.price.current">{{result.ratePlan.price.current}}</b>
+                                </a>
+                            </div>
+                            <div
+                                class="price-breakdown"
+                                ng-if="!result.ratePlan.price.fromPrice"
+                                ng-class="result.ratePlan.price.taxInclusiveFormatting ? 'has-inclusive' : ''">
+                            <span class="price-info" ng-if="result.ratePlan.price.info">
+                                                        <span
+                                                            class="widget-tooltip widget-tooltip-tl widget-tooltip-multiline"
+                                                            ng-if="result.ratePlan.price.additionalInfo">
+                                                            {{result.ratePlan.price.info}}
+                                                        </span>
+                                                        {{result.ratePlan.price.info}}
+                                                </span>
+                            <span
+                                ng-if="result.ratePlan.price.summary"
+                                class="price-summary"
+                                ng-class="result.ratePlan.price.taxInclusiveFormatting ? 'breakdown-inclusive' : ''">
+                                {{result.ratePlan.price.summary}}
+                            </span>
+                            <span class="price-instalments" ng-if="result.ratePlan.features.instalmentsMessage">
+                                {{result.ratePlan.features.instalmentsMessage}}
+                            </span>
+
+                            <span class="price-supplier-collected-charges"
+                                  ng-if="result.ratePlan.price.supplierCollectedCharges">
+                                            + {{result.ratePlan.price.supplierCollectedCharges}} charges due at hotel
+                            </span>
+                            </div>
+                            <ul class="deals" dir="ltr" ng-if="result.ratePlan.features">
+                                <li ng-if="result.ratePlan.features.freeCancellation">FREE cancellation</li>
+                                <li ng-if="result.ratePlan.features.paymentPreference">Pay now or at hotel</li>
+                            </ul>
+                            <div class="cta-wrap" ng-if="result.ratePlan">
+                            <span class="messaging" ng-if="result.messaging.scarcity">
+                                            <b class="message">{{result.messaging.scarcity}}</b>
+                                        </span>
+                                <a class="cta"
+                                   ng-href=""
+                                >
+                                        <span>
+                                                {$selectButtonText}
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        </ol>
+    </div>
+
+    <div ng-show="vm.loading" class="loading-indicator">
+        <img src="../../assets/images/loading.gif">
+    </div>
+</div>

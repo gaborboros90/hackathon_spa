@@ -1,0 +1,116 @@
+<div class="pdp-page">
+    <div id="hotel-description" class="clearfix col-24-24">
+        <div id="property-header" class="col-16-24 resp-module with-welcome-rewards">
+		<span class="welcome-rewards-block widget-tooltip widget-tooltip-responsive widget-tooltip-multiline" tabindex="0">
+			<span class="icon welcome-rewards-icon"></span>
+		</span>
+            <div class="property-description">
+                <div class="vcard">
+                    <h1 itemprop="name">{{vm.model.body.propertyDescription.name}}</h1>
+                    <span class="star-rating-text star-rating-text-strong widget-star-rating-overlay widget-tooltip widget-tooltip-responsive widget-tooltip-ignore-touch" tabindex="0">{{vm.model.body.propertyDescription.starRatingTitle}}</span>
+                </div>
+			<span class="property-address">
+				<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="postal-addr" dir="ltr">
+					<span class="street-address"><span itemprop="streetAddress">{{vm.model.body.propertyDescription.address.addressLine1}}</span>,&nbsp;</span>
+					<span class="locality"><span itemprop="addressLocality">{{vm.model.body.propertyDescription.address.cityName}}</span>,&nbsp;</span>
+					<span class="region"><span itemprop="addressRegion">{{vm.model.body.propertyDescription.address.provinceName}}</span>,&nbsp;</span>
+					<span class="postal-code">
+					<span itemprop="postalCode">{{vm.model.body.propertyDescription.address.postalCode}}</span>,&nbsp;</span>
+					<span itemprop="addressCountry" class="country-name">{{vm.model.body.propertyDescription.address.countryName}}</span>
+				</span>
+				<span id="phone-numbers">, <span itemprop="telephone" id="hd_property_info_tfn">{{vm.model.body.propertyDescription.telephone.number}}</span></span>
+			</span>
+            </div>
+        </div>
+
+        <carousel-directive data="vm.model.body.propertyDescription.hotelImageContent.hotelImages" details=""></carousel-directive>
+
+        <div id="book-info-container" class="col-8-24 resp-module content-navigation">
+            <div>
+                <div class="featured-price">
+                    <div class="pricing"><meta itemprop="priceRange" content="from {{vm.model.body.propertyDescription.featuredPrice.currentPrice.formatted}}">
+                        <span class="current-price bold">{{vm.model.body.propertyDescription.featuredPrice.currentPrice.formatted}}</span>
+                    </div>
+                    <div class="pricing-basis">
+                        <span class="price-info">{{vm.model.body.propertyDescription.featuredPrice.priceInfo}}</span><br><span class="price-summary">{{vm.model.body.propertyDescription.featuredPrice.priceInfo}}</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="price-match widget-tooltip widget-tooltip-responsive widget-tooltip-multiline" tabindex="0"><span class="text">Price Guarantee</span></div>
+            <div class="button-container"><a id="book-now-button" class="cta cta-strong" href="#rooms-and-rates-anchor" data-target="#rooms-and-rates-anchor">Book Now</a></div>
+        </div>
+    </div>
+
+
+    <div id="flexible-container-top">
+        <div id="rnr-change-search-container" class="rnr-change-search-container cont cont-bd">
+            <h2>{{vm.model.body.propertyDescription.name}}</h2>
+            <div class="query-section"><span class="search-params">{{vm.model.body.query.dates.label}}, <strong>{{vm.model.body.query.dates.numNights}} night</strong>, {{vm.model.body.query.rooms.summary.count}} room, {{vm.model.body.query.rooms.summary.adults}} adults</span></div>
+            <button class="widget-toggle-btn  widget-toggle-btn-icon" type="button">Change search</button>
+        </div>
+        <div id="rooms-and-rates" class="col-24-24 no-offers">
+            <div class="nudge-container clearfix">
+                <span class="padlock-icon">&#xe93a;</span>
+                <div class="nudge-message-wrap">
+                    <span class="message-title">Book now to get this fantastic price.</span>
+                    <span class="message-description">If you book later, there’s a chance the price will go up or the hotel will be sold out on our site.</span>
+                </div>
+            </div>
+            <ul class="rooms">
+                <li class="room cont clearfix">
+                    <div class="room-info" aria-labelledby="rr-header-room-type">
+                        <h3>Deluxe Room, 2 Single Beds, Non Smoking</h3>
+                        <div class="room-images-and-info">
+                            <div class="room-image-wrap multiple-images">
+                                <div class="room-image">
+								<span class="room-images-link-wrap">
+									<a class="room-images-link" href="#" target="_blank">
+                                        <img src="https://exp.cdn-hotels.com/hotels/5000000/4300000/4292600/4292527/4292527_135_e.jpg" alt="Guestroom">
+                                        <span class="icon-overlay"></span>
+                                    </a>
+								</span>
+                                </div>
+                            </div>
+                            <div class="room-and-hotel-info">
+                                <div class="occupancy">
+                                    <span class="occupancy-info"><strong>Sleeps 2 people</strong> (including up to 1 child)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p><a href="#" class="additional-room-info-cta">Show room information</a></p>
+                    </div>
+                    <div class="rateplans">
+                        <div class="rateplan">
+                            <div class="info">
+                                <div class="options" aria-labelledby="rr-header-options" aria-role="gridcell">
+                                    <div class="cancellation">
+                                        <strong class="widget-tooltip widget-tooltip-responsive widget-tooltip-multiline bulleted" tabindex="0">Non-refundable</strong>
+                                    </div>
+                                    <ul class="rateplan-features">
+                                        <li data-feature-id="LCS-2403" class="wifi widget-tooltip widget-tooltip-responsive widget-tooltip-multiline" data-tooltip-class="feature-tooltip" tabindex="0"><span class="feature-title">Free WiFi</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="loyalty" aria-labelledby="rr-header-loyalty" aria-role="gridcell">
+                                    <ul>
+                                        <li class="ticked has-both-welcome-rewards">Collect and Redeem</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pricing">
+                                <div class="offers-and-prices"><div class="prices" aria-labelledby="rr-header-prices" aria-role="gridcell"><div class="price"><strong class="current-price">£54</strong></div><div class="price-info">price for 1 night</div></div></div>
+                                <div class="cta-wrap" aria-role="gridcell">
+                                    <form action="https://uk.hotels.com/mobile/booking.html" method="POST" id="room-1-rateplan-1">
+                                        <button type="submit" class="cta">Book</button>
+                                    </form>
+                                    <div class="book-messaging">It only takes two minutes!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

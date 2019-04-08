@@ -1,0 +1,475 @@
+#hotel-description {
+	background-color: #f5f4f0;
+}
+
+.icon {
+	font-family: 'hcom-icons';
+}
+
+.col-16-24 {
+    padding-right: 2%;
+    padding-left: 2%;	
+}
+
+.col-8-24 {
+    padding-right: 2%;
+    padding-left: 2%;
+    word-wrap: break-word;
+    margin-bottom: 1.5em;
+}
+
+.cont-bd {
+    padding: 10px;
+}
+
+#property-header {
+    margin-bottom: 10px;
+    padding-top: 12px;
+
+    h1 {
+		color: #4e4e4e;
+	    display: inline;
+	    font-size: 16px;
+	    font-weight: bold;
+	    line-height: 18px;
+	    margin-right: 6px;    	
+    }
+
+    .welcome-rewards-block {
+		border-radius: 4px;
+	    background-color: #fff;
+	    display: block;
+	    float: left;
+	    padding: 2px;    	
+
+	    .welcome-rewards-icon {
+		    border-radius: 4px;
+		    background-color: #906;
+		    color: #fff;
+		    display: inline-block;
+		    font-size: 20px;
+		    font-weight: normal;
+		    line-height: 28px;
+		    text-align: center;
+		    vertical-align: middle;
+		    width: 28px;	    	
+	    }
+    }
+
+    .vcard {
+    	padding-bottom: .2em;
+    }
+
+    .star-rating-text {
+    	display: inline-block;
+    	margin-top: 1px;
+    	position: relative;
+    	color: #d41200;
+    	font-size: 14px;
+    	font-weight: bold;
+    	margin-bottom: 10px;
+    }
+
+    .property-address {
+    	font-size: 11px;
+    }
+}
+
+#property-header .welcome-rewards-block ~ .property-description {
+	margin-left: 40px;
+}
+
+.pricing .current-price.bold {
+	font-weight: bold;
+    color: #333;
+    display: inline-block;
+    font-size: 24px;
+    padding-left: 6px;
+    white-space: nowrap;	
+}
+.featured-price {
+	clear: both;
+}
+
+.featured-price .pricing-basis {
+    color: #333;
+    margin-bottom: 8px;
+    padding-top: 3px;
+    position: relative;
+
+    .price-info {
+    	font-size: 16px;
+    }	
+}
+
+#book-info-container {
+	position: relative;
+
+	.button-container {
+		bottom: -7px;
+    	display: inline-block;
+    	float: none;
+    	margin: 0;
+    	max-width: 42%;
+    	padding: 0;
+    	position: absolute;
+    	right: 2%;		
+	}	
+}
+
+.price-match {
+    max-width: 55%;	
+
+    .text {
+		color: #003789;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1.64;    	
+
+		&:after {
+			font-family: "hcom-icons";
+		    font-size: 18px;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    content: "";
+		    color: #003789;
+		    font-weight: normal;
+		    position: relative;
+		    top: 3px;
+		}
+    }
+}
+
+
+
+.rnr-change-search-container {
+    background-color: #4e4e4e;
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.rnr-change-search-container h2 {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 16px;
+    padding: 8px;    
+}
+
+.rnr-change-search-container .query-section {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 14px;
+}
+
+.rnr-change-search-container .widget-toggle-btn {
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px 5px;
+	border: 0;
+    display: block;
+    font-weight: normal;
+    margin-left: 0;    	
+    background: none;
+
+    &:before {
+		font-family: "hcom-icons";
+    	font-size: 12px;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    content: "";
+	    margin-right: 5px;
+    }
+}
+
+.nudge-container {
+    background-color: #dae9cc;
+    color: #028017;
+    padding: 14px 12px 16px;	
+
+    .padlock-icon {
+		float: left;
+	    font-family: hcom-icons;
+	    font-size: 24px;
+	    margin: 2px 5px;
+	    position: relative;
+	    top: 8px;    	
+    }
+
+    .nudge-message-wrap {
+	    display: table-cell;
+	    overflow: hidden;
+	    padding: 0 10px;
+	    vertical-align: top;    	
+    }
+
+    .message-title {
+		display: block;
+    	font-size: 16px;
+    	font-weight: bold;
+    	line-height: 1.3;    	
+    }
+
+    .message-description {
+		color: #4e4e4e;
+    	font-size: 14px;
+    	line-height: 1.4;    	
+    }
+}
+
+#rooms-and-rates {
+	border: 2px solid #4e4e4e;
+    border-top: 0;	
+}
+
+.room {
+    box-shadow: inset 0 0 0 3px #fff;
+    background-color: #fff;
+    margin: 10px 2%;
+    overflow: visible;
+    position: relative;	
+}
+
+.room-info {
+    background-color: #e5e3db;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    display: block;
+    min-height: 99px;
+    padding: 12px;	
+
+    h3 {
+    	margin-bottom: 10px;
+    	margin-right: 80px;    	
+    	color: #333;
+    }
+
+    .room-image-wrap {
+		display: inline-block;
+    	margin: 0 0 5px;
+    	position: absolute;
+    	right: 7px;
+    	top: 7px;    	
+
+    	.room-image {
+			border-radius: 2px;
+		    box-shadow: none;
+		    background-color: #fff;
+		    border-width: 0;
+		    display: inline-block;
+		    height: 84px;
+		    padding: 0;
+		    position: relative;
+		    width: 84px;
+		    z-index: 1;
+
+		    .room-images-link-wrap {
+			    border-radius: 2px;
+			    background-color: #f5f4f0;
+			    display: block;
+			    height: 100%;
+			    overflow: hidden;
+			    width: 100%;
+
+			   	a {
+			   		display: block;
+
+			   		img {
+					    left: -35px;
+					    position: relative;			   			
+			   		}
+
+			   		&:before {
+					    font-family: "hcom-icons";
+					    font-size: 30px;
+					    -webkit-font-smoothing: antialiased;
+					    -moz-osx-font-smoothing: grayscale;
+					    content: "";
+					    color: #e5e3db;
+					    left: 50%;
+					    line-height: 30px;
+					    margin: -15px 0 0 -15px;
+					    position: absolute;
+					    top: 50%;			   			
+			   		}
+			   	}
+		    }
+		}    		
+	}
+}
+
+.room-images-and-info {
+    margin-right: 80px;
+}
+
+.room-and-hotel-info .occupancy {
+    margin-bottom: 16px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.rateplans {
+    border: 1px solid #ccc;
+    border-top: 0;
+    float: right;
+    width: 100%;	
+}
+
+.rateplan {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    clear: both;
+    display: block;
+    float: right;
+    width: 100%;
+
+    .info {
+    	background-color: #fff;
+    	padding-right: 0;
+    	width: 54%;
+	    display: inline-block;
+	    padding: 12px;
+    	vertical-align: top;    	
+    }
+}
+
+
+.rateplan .occupancy, .rateplan .options, .rateplan .loyalty, .rateplan .offers, .rateplan .prices {
+    background-color: #fff;
+    display: block;
+    width: 100%;
+}
+
+.rateplan .options .cancellation {
+    margin-bottom: 5px;
+}
+
+.rateplan .options strong {
+    border-bottom: 1px dotted #026dc5;
+    display: inline;
+}
+
+
+.rateplan .options .rateplan-features li, .rateplan .options .npp-options li {
+    color: #458f00;
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 12px;
+    min-height: 16px;
+    min-width: 16px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.rateplan .options .rateplan-features li .feature-title, .rateplan .options .rateplan-features li .npp-title, .rateplan .options .npp-options li .feature-title, .rateplan .options .npp-options li .npp-title {
+    display: inline-block;
+    line-height: 16px;
+    margin-top: 0px;
+}
+
+.rateplan .options .rateplan-features li.wifi:after, .rateplan .options .npp-options li.wifi:after {
+    content: "";
+}
+
+.rateplan .options .rateplan-features li:after, .rateplan .options .npp-options li:after {
+    color: #458f00;
+    display: inline-block;
+    font-family: 'hcom-icons';
+    font-size: 16px;
+    font-weight: normal;
+    left: 0;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    text-transform: none;
+    top: 0;
+    width: 16px;
+}
+
+.rateplan .loyalty .welcome-rewards {
+    display: inline-block;
+    position: relative;
+}
+
+.rateplan .loyalty .welcome-rewards:after {
+    font-family: "hcom-icons";
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    color: #906;
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.rateplan .info, .rateplan .pricing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.rateplan .loyalty ul {
+    display: inline-block;
+}
+
+.rateplan .loyalty ul li {
+	padding-left: 28px;
+}
+
+.rateplan .loyalty {
+    margin-top: 12px;
+}
+
+.rateplan .pricing {
+    padding-left: 3px;
+    text-align: right;
+    width: 45%;
+}
+
+.rateplan .offers-and-prices {
+    display: block;
+    width: 100%;
+}
+
+.rateplan .prices {
+    clear: both;
+    text-align: right;
+}
+
+
+.rateplan .prices .price strong, .rateplan .prices .price ins {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: .9;
+}
+
+.rateplan .prices .price-info {
+    margin-top: 7px;
+}
+
+
+.rateplan .cta-wrap {
+    background-color: transparent;
+    margin-top: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.rateplan .book-messaging {
+    clear: both;
+    color: #3e6e00;
+    display: block;
+    padding: 8px 0 0 4px;
+    word-wrap: normal;
+}

@@ -1,0 +1,177 @@
+.hr-wrapper {
+    .punch-card {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        height: auto;
+        min-width: 260px;
+        background-color: $colour-wr-pink-bg-light;
+        color: $colour-wr;
+        z-index: 2;
+        border-radius: 4px;
+
+        .separator {
+            display: inline-block;
+            margin: 16px 4px 0 0;
+
+            font-size: 14px;
+            line-height: 28px;
+            font-weight: bold;
+
+            .RTL & {
+                margin: 16px 0 0 4px;
+            }
+        }
+
+        .cont-hd {
+            padding: 16px 0;
+            border-bottom: 1px solid $colour-wr-pink-bg;
+            margin: 0 12px;
+            background-color: transparent;
+            line-height: 0;
+
+            .wr-text {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .cont-bd {
+            padding: 12px;
+            width: auto;
+
+            .night-icons {
+                display: inline-block;
+                vertical-align: top;
+                width: 156px;
+                height: 58px;
+
+                li {
+                    color: $colour-wr;
+                    display: block;
+                    float: left;
+                    margin: 0;
+                    padding: 0 4px 4px 0;
+
+                    .RTL & {
+                        float: right;
+                        padding: 0 0 4px 4px;
+                    }
+                }
+
+                span {
+                    display: block;
+                    width: 27px;
+                    height: 27px;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 27px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    border: 1px dashed $colour-wr;
+                    border-radius: 2px;
+                }
+
+                .free-night-icon,
+                .reserved-night-icon {
+                    font: {
+                        family: 'hcom-icons';
+                        size: 16px;
+                        weight: normal;
+                    }
+                }
+
+                .free-night-icon {
+                    background-color: $colour-wr;
+                    color: $colour-white;
+                    border: 1px solid $colour-wr;
+                }
+
+                .reserved-night-icon {
+                    background-color: $colour-white;
+                    color: $colour-wr;
+                    border: 1px solid $colour-wr;
+                }
+            }
+
+            .night-summary {
+                display: inline-block;
+                height: 58px;
+                text-align: center;
+                text-shadow: 1px 0 $colour-white;
+                vertical-align: top;
+
+                .number {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 37px;
+                    height: 56px;
+                    background: none;
+                    padding: 0 9px;
+                    overflow: hidden;
+                    border: 1px dashed $colour-wr;
+                    border-radius: 4px;
+
+                    &.active {
+                        box-shadow: 0 0 0 1px $colour-wr inset;
+                        border: 1px solid $colour-wr;
+                        background-position: 0 -40px;
+                        background-color: $colour-white;
+                    }
+                }
+
+                .moon {
+                    font-family: 'hcom-icons';
+                    font-size: 28px;
+                    line-height: 28px;
+                }
+
+                .text {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 12px;
+                    margin: 2px 0 0 0;
+                }
+            }
+        }
+    }
+
+    &.silver {
+        .punch-card {
+            .separator,
+            .night-icons .night-icon {
+                color: $colour-text;
+            }
+
+            .night-summary .number {
+                border-color: $colour-text;
+                color: $colour-text;
+            }
+
+            .night-icons span {
+                border: 1px dashed $colour-text;
+            }
+        }
+    }
+
+    &.gold {
+        .punch-card {
+            .separator,
+            .night-icons .night-icon {
+                color: $colour-wr-gold;
+            }
+
+            .night-summary .number {
+                border-color: $colour-wr-gold;
+                color: $colour-wr-gold;
+            }
+
+            .night-icons span {
+                border: 1px dashed $colour-wr-gold;
+            }
+        }
+    }
+}

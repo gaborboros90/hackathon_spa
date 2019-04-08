@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="angularjs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://a1.cdn-hotels.com/da/assets/s/57.0/images/brands/hcom/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="assets/style/app.css" />
+    <script src="assets/libs/requirejs/require.js" data-main="require_config.js"></script>
+    <title>Hotels.com - Cheap Hotels With Secret Prices & Free* Nights</title>
+</head>
+<body data-ng-cloak>
+	<div class="header">
+		<button aria-controls="menu-bar" aria-expanded="false" class="menu-action burger"></button>
+		<button aria-controls="header-phonenumbers" class="menu-action phone-us"></button>
+		<span class="fast-on"></span>
+		<a href="#" class="banner"><img class="logo" src="assets/images/logo_en_GB.png" alt="Go to the Hotels.com home page" width="229"></a>
+	</div>
+
+    <div ng-view class="main-views"></div>
+
+	<div id="resp-footer" role="contentinfo">
+		<div class="ftr-drive-direct">
+			<div class="resp-row">
+				<a href="#" id="ftr-hcom-app" class="resp-col dd-module footer-hcom-app">
+				<img class="icon-app-android" src="assets/images/icon-app-store.png" alt="">
+				<h3>Hotels.com app</h3>
+				<p>Download the app and book on the go</p></a>
+			</div>
+		</div>
+		<div class="resp-row footer-group">
+			<div class="section-links">
+				<div class="footer-nav-list">
+					<ul>
+						<li class="nav-item-top-dest"><h3>Top Destinations</h3></li>
+						<li class="nav-item-top-countries"><h3>Top Countries</h3></li>
+						<li class="nav-item-cust-service"><h3>Support &amp; FAQs</h3></li>
+						<li class="nav-item-terms-and-privacy"><h3>User terms &amp; Privacy policy</h3></li>
+						<li class="nav-item-about-us"><h3 class="no-sublinks"><a href="/customer_care/about_us.html" id="ftr-about-us" rel="nofollow" target="_blank">About Us</a></h3></li>
+						<li class="nav-item-jobs"><h3 class="no-sublinks"><a href="http://www.lifeatexpedia.com/brands/hotels-com/" id="ftr-jobs" rel="nofollow" target="_blank">Jobs</a></h3></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>© 2017 Hotels.com, L.P. All rights reserved.</p><p>Hotels.com and the Hotels.com logo are trademarks or registered trademarks of Hotels.com, LP in the U.S. and/or other countries. All other trademarks are property of their respective owners.</p><p><a href="/hotel-rewards-pillar/hotelscomrewards.html" class="footer-welcome-rewards" id="ftr-welcome-rewards" rel="nofollow">* Learn more about Hotels.com™ Rewards</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

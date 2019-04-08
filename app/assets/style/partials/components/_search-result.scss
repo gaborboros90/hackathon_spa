@@ -1,0 +1,1065 @@
+/* hidden content */
+.search-header-link,
+no-js #tools-menu,
+#sort .sort-label,
+#enhanced-sort,
+#distanceList,
+#listings .header .urgency-message,
+#listings .description .hotel-badge,
+#listings .contact,
+#listings .amenities,
+#listings .location-info ul,
+#listings .pricing-bg,
+#listings .deals,
+#listings .map-link:before,
+#listings .special-deal:before,
+#listings .special-deal:after,
+#listings .special-deal .widget-tooltip-bd:before,
+#listings .special-deal .widget-tooltip-bd:after,
+#listings .has-scarcity .message,
+#listings .cta-wrap,
+#listings .value-add,
+.why-book,
+#listings .pinned-unavailable-more:before,
+#listings .pinned-unavailable-more:after,
+#listings .pinned-unavailable-more b:before {
+    display: none;
+}
+
+/* hide all tooltips on x-small-screen */
+.widget-tooltip-bd {
+    display: none !important;
+}
+
+#listings .widget-tooltip {
+    cursor: pointer;
+}
+
+/* stylistic page */
+#sort {
+    width: 75%;
+}
+
+#basic-sort {
+    display: block;
+}
+
+/* Sort submit button for non-JS users */
+no-js #sort select {
+    width: 80%;
+    margin-right: 2%;
+}
+
+no-js #basic-sort .cta {
+    position: static;
+    left: 0;
+    margin: 0;
+    font-family: hcom-icons;
+    font-size: 8px;
+    padding: 2px 5px 1px 7px;
+}
+
+#main-content {
+    padding: 0;
+}
+
+#search {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#search .main-inner {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#search-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#search-header .resp-row {
+    padding: 0;
+}
+
+#search h1 {
+    font-size: 14px;
+}
+
+#search .widget-toggle-bd {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.cta.toggleFilters {
+    width: 23%;
+    margin-right: 2%;
+    margin-bottom: 6px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    vertical-align: top;
+    text-align: left;
+}
+
+.pinned .cta.toggleFilters {
+    margin-bottom: 0;
+}
+
+.points-toggle-container {
+    border-radius: 0;
+    margin: 5px -10px 5px -10px;
+}
+
+.pinned .points-toggle-container {
+    margin-bottom: -2px;
+}
+
+.cta.toggleFilters:before {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.cta.link-map {
+    box-shadow: none;
+    display: inline-block;
+    background: $colour-link;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0 2% 0 0;
+    padding: 0.6em;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 23%;
+
+    .RTL & {
+        margin-left: 2%;
+        margin-right: 0;
+    }
+}
+
+#sort {
+    width: 50%;
+}
+
+.main-inner {
+    padding: 0 6px;
+}
+
+#listings {
+    margin-left: -6px;
+    margin-right: -6px;
+    overflow: hidden;
+}
+
+#listings .info {
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+#listings .hotel {
+    background-color: $colour-white;
+    border: 1px solid $colour-grey-dark;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+js #listings .hotel {
+    cursor: pointer;
+}
+
+#listings .hotel:first-child {
+    border-top-width: 1px;
+}
+
+#listings .image {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 4px;
+    height: auto;
+    width: 94px;
+}
+
+#listings .deal-of-the-day .image {
+    width: 90px;
+}
+
+#listings .image span {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#listings .image img {
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    text-indent: 100%; // hide the alt text if no src attribute for img
+    position: relative;
+    width: 100%;
+}
+
+#listings .hotel h3 {
+    margin: 0;
+}
+
+#listings .hotel h3 a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#listings .details {
+    margin-left: 0;
+}
+
+#listings form {
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#listings form .cta {
+    display: block;
+    margin: 0px 12px 0;
+}
+
+#listings .header h2,
+#listings fieldset span,
+#listings .widget-query-date label {
+    font-size: 14px;
+}
+
+#listings .pinned-available {
+    background-color: $colour-deals-discounts;
+    border-color: $colour-deals-discounts;
+}
+
+#listings .pinned-unavailable {
+    background-color: $colour-grey-darkish;
+}
+
+js #listings .pinned-unavailable {
+    cursor: default;
+}
+
+#listings .pinned-available .header h2:before,
+#listings .pinned-unavailable .header h2:before,
+#listings .pinned-unavailable-more b:before {
+    font-size: 16px;
+    margin-left: -26px;
+}
+
+#listings .pinned-unavailable-more,
+#listings .pinned-available-more {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 10px 11px;
+    text-align: left;
+}
+
+#listings .deal-of-the-day {
+    background-color: $colour-brand;
+    border-color: $colour-brand;
+}
+
+#listings .deal-of-the-day,
+#listings .pinned-available,
+#listings .pinned-unavailable {
+    border-width: 0 4px 4px;
+}
+
+#listings .deal-of-the-day .header {
+    padding: 12px;
+}
+
+#listings .pinned-available .header,
+#listings .pinned-unavailable .header {
+    padding: 12px 2px;
+}
+
+#listings .deal-of-the-day .deal-text {
+    font-size: 14px;
+}
+
+#listings .deal-of-the-day + .hotel,
+#listings .pinned-unavailable + .hotel {
+    border-top-width: 0;
+}
+
+#listings .deal-of-the-day .header h2 {
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+#listings .deal-of-the-day .header h2:before {
+    display: none;
+}
+
+#listings .deal-of-the-day .header .message-and-counter {
+    margin-top: 0;
+}
+
+#listings .deal-of-the-day .header p {
+    font-size: 14px;
+}
+
+#listings .deal-of-the-day .header p span {
+    line-height: 1;
+    vertical-align: bottom;
+}
+
+#listings .deal-of-the-day .header .countdown-timer {
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+#listings .deal-of-the-day,
+#listings .pinned-available,
+#listings .pinned-unavailable {
+    .hotel-wrap {
+        border-radius: 4px;
+        padding-left: 100px;
+    }
+    &.has-value-add {
+        .hotel-wrap {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+#listings .location-info.distance-sort-applied {
+    display: block;
+    margin-left: 1px;
+}
+
+#listings .location-info.distance-sort-applied ul {
+    display: block;
+    margin-top: 0;
+}
+
+#listings .location-info.distance-sort-applied li {
+    display: none;
+}
+
+#listings .location-info.distance-sort-applied li:first-child {
+    display: list-item;
+    font-size: 11px;
+}
+
+#listings {
+    &[data-destination-type="AIRPORT"],
+    &[data-destination-type="MINOR_AIRPORT"],
+    &[data-destination-type="METRO_STATION"],
+    &[data-destination-type="TRAIN_STATION"] {
+        .location-info ul {
+            display: none;
+        }
+    }
+}
+
+#listings .rates {
+    margin-top: -6px;
+    margin-bottom: 4px;
+}
+
+#listings .hotel-wrap {
+    background-color: $colour-white;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 96px;
+    padding: 4px 12px 8px 102px;
+    position: relative;
+}
+
+#listings .description {
+    width: 100%;
+    padding: 0;
+    min-height: 72px;
+    margin-bottom: 6px;
+}
+
+#listings .additional-details {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+#listings .additional-details-container {
+    min-height: 0;
+    display: inline-block;
+}
+
+#listings .star-rating-container {
+    margin-bottom: 0;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#listings .star-rating {
+    margin: 2px 0 3px 0;
+}
+
+#listings .icon-star {
+    font-size: 10px;
+}
+
+#listings .location-info {
+    margin-bottom: 3px;
+    margin-left: 6px;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#listings .map-link {
+    font-size: 11px;
+}
+
+#search .dates-occupancy {
+    font-size: 12px;
+}
+
+#listings .welcome-rewards {
+    margin: 0 0 0 6px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 12px;
+    background: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#listings .welcome-rewards:after {
+    color: $colour-wr;
+    font-family: "hcom-icons";
+    font-size: 1em;
+    content: '\e927';
+    position: relative;
+    top: 0;
+}
+
+#listings .welcome-rewards .hr-live-text {
+    display: none;
+}
+
+#listings .pricing {
+    display: block;
+    position: static;
+    width: auto;
+    padding: 0;
+    text-align: right;
+    padding-right: 0;
+    min-height: 1em;
+}
+
+#listings .price {
+    clear: both;
+    display: block;
+    font-size: 10px;
+    margin: 0 0 5px 0;
+}
+
+#listings .price del {
+    font-size: 14px;
+    margin-left: 0;
+}
+
+#listings .price b,
+#listings .price ins {
+    font-size: 20px;
+}
+
+#listings .price .strikethrough-asterisk {
+    display: inline-block;
+}
+
+#listings .special-deal {
+    display: block;
+    padding: 0;
+    background: $colour-transparent;
+    color: $colour-brand;
+    line-height: 1.5em;
+    margin: -6px 0 6px 0;
+    right: auto;
+    left: auto;
+    overflow: hidden;
+}
+
+#listings .price-supplier-collected-charges {
+    margin-left: 3px;
+}
+
+#listings .secret-price .price-badge {
+    margin: 0;
+
+    strong {
+        width: auto;
+        min-width: 45%;
+    }
+}
+
+#listings .special-deal + .rates {
+    margin-top: 4px;
+}
+
+#listings .special-deal .icon {
+    display: none;
+}
+
+#listings .package-rate .special-deal .icon {
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    color: $colour-white;
+    font-size: 12px;
+}
+
+#listings .special-deal b {
+    background: $colour-price;
+    border-radius: 4px;
+    color: $colour-white;
+    display: inline-block;
+    padding: 2px 6px;
+    margin-left: 6px;
+    float: right;
+    //max-width: 35%;
+    vertical-align: top;
+}
+
+#listings .package-rate .special-deal b {
+    background-color: $colour-assurance-msg;
+}
+
+#listings .special-deal.widget-tooltip:hover .widget-tooltip-bd,
+#listings .special-deal.widget-tooltip-hover .widget-tooltip-bd {
+    margin-bottom: 0;
+}
+
+#listings .special-deal .widget-tooltip-bd {
+    display: inline-block !important;
+    position: static;
+    margin-top: 2px;
+    opacity: 1;
+    padding: 0;
+    border: 0;
+    background: $colour-transparent;
+    font-weight: bold;
+    right: auto;
+    left: auto;
+    box-shadow: none;
+    width: auto;
+    color: $colour-price;
+    float: right;
+}
+
+#listings .price-breakdown {
+    display: block;
+    clear: both;
+    font-size: 11px;
+    line-height: 1.25;
+    margin: 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+#listings .price-breakdown.has-inclusive {
+    margin-top: 1px;
+}
+
+#listings .price-info,
+#listings .price-summary {
+    display: inline;
+}
+
+#listings .description .messaging {
+    display: none;
+}
+
+.special-deal .icon {
+    padding-right: 6px;
+}
+
+#listings .sponsored-label {
+    margin-top: 5px;
+    text-align: right;
+}
+
+#listings .great-rate-asterisk {
+    display: inline-block;
+    margin-left: 1px;
+}
+
+#listings .disclaimer {
+    padding: 0 12px;
+}
+
+#listings .disclaimer.drr-disclaimer {
+    display: inline-block;
+    &:before {
+        content: '*';
+        display: inline-block;
+    }
+}
+
+#listings .ad-placement-wrap {
+    border-top: 1px solid $colour-grey-darkish;
+    padding: 10px 0 5px;
+}
+
+#adLEFT2_468X60 {
+    display: none;
+}
+
+#adLEFT3_300X50 {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Zap empty ads (class is added once ad scripts have executed) */
+#adLEFT3_300X50.collapsed {
+    display: none;
+}
+
+#search-header .notification-banner,
+.RTL #search-header .notification-banner {
+    margin: 5px;
+}
+
+.teaser .cta {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.teaser-disneyland {
+    background-image: url(/assets/images/common/pages/sha/teaser-disneyland-small.jpg);
+}
+
+.teaser-disneyworld {
+    background-image: url(/assets/images/common/pages/sha/teaser-disneyworld-small.jpg);
+}
+
+#filter-name .fullscreenToggle {
+    font-size: 16px;
+    width: 208px;
+}
+
+#listings .additional-info {
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+touch #basic-sort select {
+    font-size: 16px;
+}
+
+#listings .price-info .widget-tooltip {
+    border-bottom: none;
+}
+
+// show recent searches
+#recent-searches {
+    padding: 6px;
+    h2 {
+        font-size: 14px;
+    }
+}
+
+.recent-search-flag {
+    display: none;
+}
+
+.recent-search {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.recent-search-destination,
+.recent-search-summary {
+    font-size: 12px;
+    margin-left: 0;
+}
+
+.reward-banner {
+    border-radius: 0;
+    margin: 0;
+
+    p {
+        &.small-view {
+            display: inline-block;;
+        }
+
+        &.full-view {
+            display: none;
+        }
+    }
+
+    &.unlock-secret-price-banner {
+        border-radius: 0;
+        border: 0;
+        display: block;
+
+        .get-secret {
+            display: block;
+            padding: 18px 13px 15px;
+            width: auto;
+
+            span {
+                display: none;
+            }
+        }
+
+        .button-container {
+            display: block;
+            padding: 0 13px 23px;
+            text-align: center;
+            width: auto;
+
+            .unlock-now {
+                float: none;
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+
+        .no-js & {
+            display: none;
+        }
+    }
+
+    &.punch-card {
+        border-radius: 0;
+        padding-bottom: 10px;
+
+        .RTL & {
+            margin: 0 -10px 0 0;
+            padding-bottom: 10px;
+            width: auto;
+        }
+
+        p,
+        .hr-wrapper p,
+        .punch-card,
+        .hr-logo-no-moon {
+            display: none;
+        }
+
+        .hr-wrapper .hr-logo-moon {
+            display: block;
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+// Reviews Box
+.reviews-box {
+    margin-bottom: 5px;
+    width: auto;
+
+    .cont {
+        background-color: $colour-transparent;
+        border: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .guest-reviews {
+        .guest-reviews-badge {
+            font-size: 12px;
+
+            &.guest-rating-excellent,
+            &.guest-rating-outstanding {
+                font-size: 12px;
+            }
+        }
+
+        .guest-rating-value {
+            font-size: 12px;
+
+            strong {
+                font-size: 12px;
+            }
+        }
+
+        .guest-reviews-link {
+            font-size: 11px;
+            margin: 0 8px;
+            display: inline;
+
+            a {
+                color: $colour-grey-darkish;
+            }
+        }
+    }
+
+    .ta-reviews {
+        .icon-trip-advisor {
+            font-size: 12px;
+        }
+
+        .text-wrap {
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .ta-total-reviews {
+            font-size: 11px;
+        }
+
+        .icon-trip-advisor {
+            color: #589742;
+            display: inline-block;
+            font-family: hcom-icons;
+        }
+    }
+}
+
+// Dimmed property
+#listings {
+    .description,
+    .details {
+        min-height: 0;
+    }
+
+    .description {
+        margin-left: 2px;
+    }
+
+    h3 {
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-left: 0;
+
+    }
+
+    .location-info {
+        display: inline-block;
+    }
+}
+
+.RTL #search-header.map-unavailable .resp-row {
+    padding: 0;
+}
+
+.widget-overlay.newsletter-overlay button[type=submit] {
+    background: $colour-link;
+    border: 0;
+    box-shadow: 0 2px 0 0 $colour-link-active;
+    padding: 8px;
+
+    &:hover {
+        background: $colour-link;
+        box-shadow: 0 2px 0 0 $colour-link-active, 0 1px 3px 2px rgba(0, 0, 0, 0.22);
+    }
+
+    &:active {
+        background: $colour-link-active;
+        box-shadow: 0 2px 0 0 $colour-link-active;
+        padding: 9px 8px 7px 8px;
+    }
+}
+
+#listings {
+    .expanded-area {
+        .additional-details .welcome-rewards,
+        .reviews-box .welcome-rewards {
+            display: none;
+        }
+
+        &.border-crossed {
+            .reviews-box .welcome-rewards {
+                display: inline-block;
+                margin: 0;
+            }
+
+            .additional-details .welcome-rewards {
+                display: none;
+            }
+        }
+
+        .star-rating-container {
+            display: none;
+        }
+
+        .location-info {
+            display: inline-block;
+            margin-left: 0;
+
+            .RTL & {
+                margin-right: 0;
+            }
+
+            .welcome-rewards {
+                display: inline-block;
+                margin-left: 4px;
+
+                .RTL & {
+                    margin-left: 0;
+                    margin-right: 4px;
+                }
+            }
+
+            // The firts geo item need to be displayed after star rating
+            // instead of neighbourhood
+            & ul {
+                display: block;
+                font-size: 11px;
+                margin-top: 0;
+
+                li {
+                    display: none;
+
+                    &:first-child {
+                        display: list-item;
+                    }
+                }
+            }
+
+            .star-rating {
+                display: inline-block;
+                margin-right: 4px;
+
+                .RTL & {
+                    margin-left: 4px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .expanded-area-message {
+        border-radius: 0;
+        margin-bottom: 0;
+
+        .icon {
+            display: none;
+        }
+
+        &:before {
+            z-index: 1;
+        }
+    }
+
+    .as-seen-on .as-seen-on-message {
+        border-radius: 0;
+        border-width: 1px 0;
+        left: -4px;
+        right: -4px;
+        width: auto;
+    }
+}
+
+.description.resp-module {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: initial;
+}
+
+#listings .map-link {
+    display: inline-block;
+    font-size: 11px;
+}
+
+#listings .location-info a {
+    color: #4e4e4e;
+}
+
+.reviews-box .guest-reviews .guest-reviews-badge {
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+}
+
+#listings .price b, #listings .price ins, #listings .price del {
+    direction: ltr;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#listings .price b, #listings .price ins {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#listings .price b, .responsive-css #listings .price ins {
+    font-size: 20px;
+}
+
+#listings .hotel.dmd .pricing b, #listings .hotel.dmd .pricing .old-price-cont ins {
+    color: #333;
+    margin: 0;
+}
+
+#listings .price-from-info {
+    color: #333;
+}
+
+.reviews-box .guest-reviews + .ta-reviews {
+    padding-top: 5px;
+}
+
+.reviews-box .ta-reviews .logo-wrap {
+    display: inline-block;
+}
+
+.reviews-box .ta-reviews .ta-logo {
+    background-image: url(/assets/images/tripadvisor-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: 1px;
+    text-indent: -999em;
+    width: 28px;
+}
+
+.reviews-box .ta-reviews .ta-rating {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.widget-toggle-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 10px;
+    padding: 9px;
+}
+
+.loading-indicator {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+

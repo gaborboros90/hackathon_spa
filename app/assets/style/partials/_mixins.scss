@@ -1,0 +1,55 @@
+@mixin cta($width: auto, $font-size: 14px, $font-size-small: 13px) {
+    &,
+    &:link,
+    &:visited {
+        background-color:       $colour-cta-theme-bg;
+        border:                 1px solid $colour-cta-theme-border;
+        border-radius: 2px;
+        box-shadow: inset 0 -2px 0  $colour-cta-theme-border-bottom;
+        color:                  $colour-white;
+        cursor:                 pointer;
+        display:                inline-block;
+        font-size:              $font-size;
+        font-weight:            bold;
+        line-height:            1.5;
+        margin:                 0 if($width == 100%, 0, 2px) 4px;
+        overflow:               hidden;
+        padding:                4px 16px;
+        position:               relative;
+        vertical-align:         middle;
+        width:                  $width;
+    }
+    &:before {
+        background-repeat:      no-repeat;
+        content:                ' ';
+        background-image:       url('data:image/svg+xml,%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%3Csvg%20width%3D%2724px%27%20height%3D%2724px%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%20preserveAspectRatio%3D%27xMidYMid%27%20class%3D%27uil-reload%27%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%27100%27%20height%3D%27100%27%20fill%3D%27none%27%3E%3C%2Frect%3E%3Cg%3E%3Cpath%20d%3D%27M50%2015A35%2035%200%201%200%2074.787%2025.213%27%20fill%3D%27none%27%20stroke%3D%27'+ str-replace(''+ $colour-cta-theme-processing-icon,'#','%23')+'%27%20stroke-width%3D%2712px%27%3E%3C%2Fpath%3E%3Cpath%20d%3D%27M50%200L50%2030L66%2015L50%200%27%20fill%3D%27'+ str-replace(''+ $colour-cta-theme-processing-icon,'#','%23')+'%27%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        display:                inline-block;
+        height:                 24px;
+        left:                   50%;
+        margin:                 -12px 0 0 -12px;
+        position:               absolute;
+        top:                    250%;
+        width:                  24px;
+    }
+    .no-touch &:hover,
+    &:active,
+    &.cta-active {
+        background-color:       $colour-cta-theme-hover-bg;
+        background-image:       none;
+        border:                 1px solid $colour-cta-theme-hover-border;
+        box-shadow: inset 0 -2px 0  $colour-cta-theme-hover-border-bottom;
+        text-decoration:        none;
+    }
+}
+
+.cta {
+    @include cta;
+}
+
+.cta.cta-control {
+    box-shadow: none;
+}
+
+a.cta {
+    @extend .cta;
+}

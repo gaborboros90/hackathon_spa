@@ -1,0 +1,81 @@
+@import "variables";
+
+.header {
+	background-color: $colour-brand;
+	height: 46px;
+	padding: 0 15px 0 10px;
+	position: relative;
+
+	.banner {
+		height: 22px;
+		margin-top: 12px;
+		display: inline-block;
+	}
+
+	.logo {
+		margin-top: -66px;
+		margin-left: -47px;
+	}
+
+	.menu-action {
+		position: absolute;
+		top: 0;
+		z-index: 16;
+		display: inline-block;
+		overflow: hidden;
+		cursor: pointer;
+		border: none;
+		background: transparent;
+		font-family: 'hcom-icons';
+		color: #fff;
+	    font-size: 12px;
+
+
+		&.burger {
+			right: 2px;
+			padding: 6px 8px 8px 8px;
+
+			&:before {
+				content: '\e97e';
+			    border-radius: 50%;
+			    border: 2px solid #fff;
+			    font-size: 24px;
+			    line-height: 24px;
+			    padding: 2px;
+			    display: inline-block;
+			}
+
+		}
+
+		&.phone-us {
+			top: 12px;
+		    right: 50px;
+		    padding-left: 0;
+
+			&:before {
+				content: '\e928';
+				font-size: 20px;
+				padding: 10px 12px 10px 10px;
+			}
+
+	        &:after {
+	            content: '|';
+	            font-size: 14px;
+	            color: $colour-white;
+	            position: relative;
+	            bottom: 5px;
+	            font-weight: bold;
+	        }			
+		}
+	}
+
+	.fast-on {
+	    background: url(../images/fast_on.png) no-repeat center;
+	    display: inline-block;
+	    width: 120px;
+	    height: 35px;
+	    position: absolute;
+	    right: 96px;
+	    top: 5px;
+	}
+}
